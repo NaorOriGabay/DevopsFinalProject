@@ -3,34 +3,34 @@
 <TITLE>Form Example</TITLE>     
 </HEAD>     
 <BODY BGCOLOR="#ffffcc">     
-<% if (request.getParameter("UserName")==
-null && request.getParameter("Password")
+<% if (request.getParameter("name")==
+null && request.getParameter("email")
  == null) { %>     
 <CENTER>     
 <H2>User Info Request Form</H2>     
 <FORM METHOD="GET" ACTION="/developer/technicalArticles/xml/WebAppDev/process.jsp">     
 <P>     
-UserName: <input type="text" name=
-"UserName" size=26>     
+Your name: <input type="text" name=
+"name" size=26>     
 <P>     
-Password: <input type="text" name=
-"Password" size=26>     
+Your email: <input type="text" name=
+"email" size=26>     
 <P>     
 <input type="submit" value="Process">     
 </FORM>     
 </CENTER>     
 <% } else { %>     
-<%! String UserName, Password; %>     
+<%! String name, email; %>     
 <%     
-UserName = request.getParameter("UserName");     
-Password = request.getParameter("Password");     
+name = request.getParameter("name");     
+email = request.getParameter("email");     
 %>     
 <P>     
 <B>You have provided the following 
 info</B>:     
 <P>     
-<B>UserName</B>: <%= UserName %><P>     
-<B>Password</B>: <%= Password %>     
+<B>Name</B>: <%= name %><P>     
+<B>Email</B>: <%= email %>     
 <% } %>     
 </BODY>     
 </HTML>
